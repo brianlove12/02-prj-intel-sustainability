@@ -1,1 +1,87 @@
+/* Timeline Section Styles */
+.timeline-section {
+	padding: 2rem 1rem;
+	background: #f5f7fa;
+	text-align: center;
+}
+
+.timeline-section h2 {
+	color: #0071c5;
+	margin-bottom: 2rem;
+}
+
+/* Timeline container uses flexbox */
+.timeline {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 2rem;
+	flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* Each timeline item */
+.timeline-item {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	padding: 1.5rem 1rem;
+	width: 260px;
+	transition: transform 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Hover effect for timeline cards */
+.timeline-item:hover {
+	transform: translateY(-8px) scale(1.04);
+	box-shadow: 0 8px 24px rgba(0,113,197,0.15);
+}
+
+/* Year circle */
+.timeline-year {
+	background: #0071c5;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 6px rgba(0,113,197,0.10);
+}
+
+.timeline-content h3 {
+	margin: 0.5rem 0 0.3rem 0;
+	color: #333;
+}
+
+.timeline-content p {
+	color: #555;
+	font-size: 1rem;
+}
+
+/* Instructions text */
+.timeline-instructions {
+	margin-top: 2rem;
+	color: #888;
+	font-size: 1rem;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 700px) {
+	.timeline {
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	.timeline-item {
+		width: 90vw;
+		max-width: 340px;
+	}
+}
 /* Add your CSS here */
