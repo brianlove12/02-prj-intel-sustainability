@@ -1,3 +1,92 @@
+/* Thin light blue divider line in header */
+.header-divider {
+	width: 25%;
+	height: 2px;
+	background: linear-gradient(90deg, #6ab2ec 0%, #b3dafe 100%);
+	margin: 0.7rem 0 0.7rem 0;
+	border-radius: 1px;
+	box-shadow: 0 1px 4px rgba(110,198,247,0.10);
+}
+/* Intel-branded background for the whole page */
+body {
+	min-height: 100vh;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(120deg, #e3f0fc 0%, #f5f7fa 100%);
+}
+
+/* Header section styling - full width, square on desktop */
+header {
+	background: linear-gradient(90deg, #2565c5ea 0%, #063066 100%);
+	box-shadow: 0 2px 12px rgba(0,113,197,0.07);
+	margin: 0;
+	border-radius: 0;
+	width: 100vw;
+	height: 340px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}
+
+header div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Intel logo sizing and placement */
+header img {
+	width: 200px;
+	height: auto;
+	margin-bottom: 1.2rem;
+	display: block;
+}
+
+/* Main headline styling */
+header h1 {
+	font-size: 2.2rem;
+	color: white;
+	margin: 0 0 0.7rem 0;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-shadow: 0 2px 8px rgba(0,113,197,0.08);
+}
+
+/* Subheading / description styling */
+header p {
+	font-size: 1.1rem;
+	color: white;
+	margin: 0 0 0.5rem 0;
+	line-height: 1.6;
+	max-width: 480px;
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	header {
+		width: 100vw;
+		height: 60vw;
+		min-height: 180px;
+		max-height: 340px;
+		padding: 0;
+	}
+	header div {
+		padding: 0 0.5rem;
+	}
+	header img {
+		width: 200px;
+	}
+	header h1 {
+		font-size: 2.4rem;
+	}
+	header p {
+		font-size: 2rem;
+	}
+}
 /* Timeline Section Styles */
 .timeline-section {
 	padding: 2rem 1rem;
@@ -10,13 +99,25 @@
 	margin-bottom: 2rem;
 }
 
-/* Timeline container uses flexbox */
+/* Timeline container uses flexbox and scrolls horizontally on large screens */
 .timeline {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
 	gap: 2rem;
-	flex-wrap: wrap; /* Allows wrapping on small screens */
+	overflow-x: auto;
+	overflow-y: visible;
+	padding-bottom: 1.5rem;
+	justify-content: flex-start;
+	align-items: stretch;
+	scroll-snap-type: x mandatory;
+}
+
+/* Each timeline item snaps into place for smooth scrolling */
+.timeline-item {
+	/* ...existing code... */
+	scroll-snap-align: start;
+	flex: 0 0 260px;
+	/* width is already set to 260px */
 }
 
 /* Each timeline item */
@@ -72,16 +173,19 @@
 	font-size: 1rem;
 }
 
-/* Responsive design for mobile */
-@media (max-width: 700px) {
+/* Responsive design for mobile: stack vertically */
+@media (max-width: 800px) {
 	.timeline {
 		flex-direction: column;
 		align-items: center;
 		gap: 1.5rem;
+		overflow-x: visible;
+		padding-bottom: 0;
 	}
 	.timeline-item {
 		width: 90vw;
 		max-width: 340px;
+		flex: 1 1 auto;
 	}
 }
 /* Add your CSS here */
