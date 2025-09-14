@@ -90,7 +90,7 @@ header p {
 }
 /* Timeline Section Styles */
 .timeline-section {
-		padding: 2.5rem 2vw 1.5rem 2vw;
+		padding: 1.5rem 1.5vw 1.5rem 1.5vw;
 	background: #e3e4e6d7;
 	text-align: center;
 	margin: 0;
@@ -99,7 +99,7 @@ header p {
 
 .timeline-section h2 {
 		color: #0071c5;
-		margin-bottom: 3.5rem;
+		margin-bottom: 2.5rem;
 		padding-bottom: 0;
 }
 
@@ -121,70 +121,88 @@ header p {
 
 /* Each timeline item snaps into place for smooth scrolling */
 .timeline-item {
-	/* ...existing code... */
 	scroll-snap-align: start;
 	flex: 0 0 260px;
-	/* width is already set to 260px */
+	position: relative;
 }
+
+	/* ...existing code... */
+	
 
 /* Each timeline item styled with Intel colors and spacing */
 .timeline-item {
-	background: #fafdff;
-	border-radius: 18px;
-	box-shadow: 0 4px 16px rgba(50,102,189,0.10), 0 1.5px 6px rgba(11,105,228,0.07);
-	border: 2px solid #e3f0fc;
-	padding: 2rem 1.2rem 1.7rem 1.2rem;
-	width: 260px;
-	margin: 0.5rem 0;
-	transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-	cursor: pointer;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+		background: #f5faff;
+		border-radius: 16px;
+		box-shadow: 0 4px 16px rgba(50,102,189,0.10), 0 1.5px 6px rgba(11,105,228,0.07);
+		border: 2px solid #b3dafe;
+		padding: 2rem 1.5rem 1.7rem 1.5rem;
+		width: 260px;
+		margin: 0.7rem 0;
+		transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 }
 
 /* Hover effect for timeline cards */
 .timeline-item:hover {
-	transform: translateY(-8px) scale(1.04);
-	box-shadow: 0 12px 32px rgba(11,105,228,0.18);
-	border-color: #6ab2ec;   
+		transform: translateY(-8px) scale(1.04);
+		box-shadow: 0 12px 32px rgba(11,105,228,0.18);
+		border-color: #2565c5;
 }
 
 /* Year circle with Intel blue */
 .timeline-year {
-	background: linear-gradient(135deg, #2565c5 60%, #6ab2ec 100%);
-	color: #fff;
-	font-weight: bold;
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.3rem;
-	margin-bottom: 1.1rem;
-	box-shadow: 0 2px 8px rgba(50,102,189,0.13);
-	border: 2.5px solid #e3f0fc;
+		background: linear-gradient(135deg, #2565c5 60%, #6ab2ec 100%);
+		color: #fff;
+		font-weight: bold;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.3rem;
+		margin-bottom: 1.1rem;
+		box-shadow: 0 2px 8px rgba(50,102,189,0.13);
+		border: 2.5px solid #b3dafe;
 }
 
 
 /* Card title */
 .timeline-content h3 {
-	margin: 0.5rem 0 0.3rem 0;
-	color: #2565c5;
-	font-size: 1.18rem;
-	font-weight: bold;
-	letter-spacing: 0.5px;
+		margin: 0.5rem 0 0.3rem 0;
+		color: #2565c5;
+		font-size: 1.18rem;
+		font-weight: bold;
+		letter-spacing: 0.5px;
 }
 
 
 /* Card description */
 .timeline-content p {
-	color: #063066;
-	font-size: 1rem;
-	margin: 0.2rem 0 0 0;
-	line-height: 1.5;
-}
+		color: #063066;
+		font-size: 1rem;
+		margin: 0.2rem 0 0 0;
+		line-height: 1.6;
+	}
+
+	/* Hide details by default, show on hover for interactivity with transition */
+	.reveal-on-hover {
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: opacity 0.4s ease, max-height 0.4s ease;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.timeline-item:hover .reveal-on-hover {
+		opacity: 1;
+		max-height: 300px;
+	}
+
 
 /* Instructions text */
 .timeline-instructions {
