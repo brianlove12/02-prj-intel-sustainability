@@ -1,3 +1,14 @@
+.fun-fact {
+	margin-top: 1rem;
+	padding: 0.7rem 1rem;
+	background: #c0c1c4;
+	color: #0b0c0e;
+	border-radius: 10px;
+	font-size: 0.98rem;
+	box-shadow: 0 2px 8px rgba(50,102,189,0.10);
+	transition: opacity 0.5s;
+	opacity: 1;
+}
 .timeline-item-1968 .timeline-year {
 	color: #fff !important;
 }
@@ -262,7 +273,7 @@ header p {
 			opacity: 0;
 			max-height: 0;
 			overflow: hidden;
-			transition: opacity 1.5s ease, max-height 1.5s ease-in-out;
+			transition: opacity 1.5s ease, max-height 1s ease-in-out;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
