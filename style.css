@@ -1,3 +1,24 @@
+/* Blurred background for 1971 milestone - image fits box */
+.timeline-item-1971 {
+	position: relative;
+	overflow: hidden;
+}
+.timeline-1971-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/4004Chip.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+.timeline-item-1971 > *:not(.timeline-1971-bg) {
+	position: relative;
+	z-index: 1;
+}
 .timeline-item-1968, .timeline-item-1968 * {
 	color: #fff !important;
 }
@@ -21,26 +42,20 @@ body {
 
 /* Header section styling - full width, square on desktop */
 header {
-	background: linear-gradient(90deg, #2565c5ea 0%, #063066 100%);
-	box-shadow: 0 2px 12px rgba(0,113,197,0.07);
-	margin: 0;
-	border-radius: 0;
-	width: 100vw;
-	height: 340px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
+		background: linear-gradient(90deg, #2565c5ea 0%, #063066 100%);
+		box-shadow: 0 2px 12px rgba(0,113,197,0.07);
+		margin: 0;
+		border-radius: 0;
+		width: 100vw;
+		height: 340px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		text-align: center;
 }
 
-header div {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
 
 /* Intel logo sizing and placement */
 header img {
@@ -126,9 +141,58 @@ header p {
 
 /* Each timeline item snaps into place for smooth scrolling */
 .timeline-item {
-		scroll-snap-align: center;
-	flex: 0 0 260px;
-	position: relative;
+			scroll-snap-align: center;
+			flex: 0 0 260px;
+			position: relative;
+		}
+
+		/* Ensure semantic elements are styled the same as divs */
+		article.timeline-item {
+			background: #f5faff;
+			border-radius: 16px;
+			box-shadow: 0 4px 16px rgba(50,102,189,0.10), 0 1.5px 6px rgba(11,105,228,0.07);
+			border: 2px solid #b3dafe;
+			padding: 2rem 1.5rem 1.7rem 1.5rem;
+			width: 260px;
+			margin: 0.7rem 0;
+			transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		section.timeline-content.reveal-on-hover {
+			opacity: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: opacity 1.5s ease, max-height 1.5s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			pointer-events: none;
+		}
+		article.timeline-item:hover section.reveal-on-hover,
+		article.timeline-item:focus-within section.reveal-on-hover {
+			opacity: 1;
+			max-height: 300px;
+			pointer-events: auto;
+		}
+
+		span.timeline-year {
+			background: linear-gradient(135deg, #2565c5 60%, #6ab2ec 100%);
+			color: #fff;
+			font-weight: bold;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.3rem;
+			margin-bottom: 1.1rem;
+			box-shadow: 0 2px 8px rgba(50,102,189,0.13);
+			border: 2.5px solid #b3dafe;
 }
 
 	/* ...existing code... */
