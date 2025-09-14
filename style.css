@@ -1,27 +1,3 @@
-/* Blurred background for 1971 milestone - image fits box */
-.timeline-item-1971 {
-	position: relative;
-	overflow: hidden;
-}
-.timeline-1971-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url('img/4004Chip.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	z-index: 0;
-}
-.timeline-item-1971 > *:not(.timeline-1971-bg) {
-	position: relative;
-	z-index: 1;
-}
-.timeline-item-1968, .timeline-item-1968 * {
-	color: #fff !important;
-}
 /* Thin light blue divider line in header */
 .header-divider {
 	width: 25%;
@@ -320,4 +296,156 @@ header p {
 .timeline-item-1968 > *:not(.timeline-1968-bg) {
 	position: relative;
 	z-index: 1;
+}
+.timeline-item-2040 > .timeline-year,
+.timeline-item-2040 > section {
+	color: #fff;
+}
+/* Blurred background for 2040 milestone - image fits box */
+.timeline-item-2040 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2040-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/7.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2040 > *:not(.timeline-2040-bg) {
+	position: relative;
+	z-index: 1;
+}
+.timeline-item-2040 > .timeline-year,
+.timeline-item-2040 > section {
+	color: #fff;
+}
+
+/* Blurred background for 1985 milestone - image fits box */
+.timeline-item-1985 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-1985-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/4.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-1985 > *:not(.timeline-1985-bg) {
+	position: relative;
+	z-index: 1;
+}
+
+/* Blurred background for 2022 milestone - image fits box */
+.timeline-item-2022 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2022-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/5.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2022 > *:not(.timeline-2022-bg) {
+	position: relative;
+	z-index: 1;
+}
+
+/* Blurred background for 2030 milestone - image fits box */
+.timeline-item-2030 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2030-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/6.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2030 > *:not(.timeline-2030-bg) {
+	position: relative;
+	z-index: 1;
+}
+/* Blurred background for 1978 milestone - image fits box */
+.timeline-item-1978 {
+	position: relative;
+	overflow: hidden;
+}
+.timeline-1978-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('img/3.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	
+		z-index: 0;
+}
+.timeline-item-1978 > .timeline-year,
+.timeline-item-1978 > section {
+	position: relative;
+	z-index: 1;
+}
+/* Blurred background for 1971 milestone - image fits box */
+.timeline-item-1971 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-1971-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/4004Chip.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-1971 > *:not(.timeline-1971-bg) {
+	position: relative;
+	z-index: 1;
+}
+.timeline-item-1968, .timeline-item-1968 * {
+	color: #fff !important;
 }
