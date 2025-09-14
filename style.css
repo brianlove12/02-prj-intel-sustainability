@@ -176,18 +176,19 @@ header p {
 
 /* Each timeline item styled with Intel colors and spacing */
 .timeline-item {
-		background: #f5faff;
-		border-radius: 16px;
-		box-shadow: 0 4px 16px rgba(50,102,189,0.10), 0 1.5px 6px rgba(11,105,228,0.07);
-		border: 2px solid #b3dafe;
-		padding: 2rem 1.5rem 1.7rem 1.5rem;
-		width: 260px;
-		margin: 0.7rem 0;
-		transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-		cursor: pointer;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	background: #f5faff;
+	border-radius: 16px;
+	box-shadow: 0 4px 16px rgba(50,102,189,0.10), 0 1.5px 6px rgba(11,105,228,0.07);
+	border: 2px solid #b3dafe;
+	padding: 2rem 1.5rem 1.7rem 1.5rem;
+	width: 260px;
+	margin: 0.7rem 0;
+	transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
 }
 
 /* Hover effect for timeline cards */
@@ -217,17 +218,17 @@ header p {
 
 /* Card title */
 .timeline-content h3 {
-		margin: 0.5rem 0 0.3rem 0;
-		color: #2565c5;
-		font-size: 1.18rem;
-		font-weight: bold;
-		letter-spacing: 0.5px;
+	margin: 0.5rem 0 0.3rem 0;
+	color: #fff;
+	font-size: 1.18rem;
+	font-weight: bold;
+	letter-spacing: 0.5px;
 }
 
 
 /* Card description */
 .timeline-content p {
-		color: #063066;
+		color: #fff;
 		font-size: 1rem;
 		margin: 0.2rem 0 0 0;
 		line-height: 1.6;
