@@ -1,3 +1,26 @@
+.timeline-item-1968 .timeline-year {
+	color: #fff !important;
+}
+.timeline-item:hover .timeline-1968-bg,
+.timeline-item:hover .timeline-1971-bg,
+.timeline-item:hover .timeline-1978-bg,
+.timeline-item:hover .timeline-1985-bg,
+.timeline-item:hover .timeline-2022-bg,
+.timeline-item:hover .timeline-2030-bg,
+.timeline-item:hover .timeline-2040-bg {
+	opacity: 0.5;
+	transition: opacity 0.5s;
+}
+
+.timeline-1968-bg,
+.timeline-1971-bg,
+.timeline-1978-bg,
+.timeline-1985-bg,
+.timeline-2022-bg,
+.timeline-2030-bg,
+.timeline-2040-bg {
+	transition: opacity 0.5s;
+}
 /* Thin light blue divider line in header */
 .header-divider {
 	width: 25%;
@@ -188,7 +211,7 @@ header p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: #fff;
+	color: #000;
 }
 
 /* Hover effect for timeline cards */
@@ -219,7 +242,7 @@ header p {
 /* Card title */
 .timeline-content h3 {
 	margin: 0.5rem 0 0.3rem 0;
-	color: #fff;
+	color: #000;
 	font-size: 1.18rem;
 	font-weight: bold;
 	letter-spacing: 0.5px;
@@ -228,7 +251,7 @@ header p {
 
 /* Card description */
 .timeline-content p {
-		color: #fff;
+		color: #000;
 		font-size: 1rem;
 		margin: 0.2rem 0 0 0;
 		line-height: 1.6;
@@ -448,5 +471,5 @@ header p {
 	z-index: 1;
 }
 .timeline-item-1968, .timeline-item-1968 * {
-	color: #fff !important;
+	color: #000 !important;
 }
